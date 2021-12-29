@@ -1,9 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
-.container-fluid {
-  margin-top: 2em;
+body {
+  background-color: blue !important;
 }
 /*# sourceMappingURL=style.css.map */
