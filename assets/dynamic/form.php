@@ -11,7 +11,7 @@
 </head>
 <body style="background-color:#151546;">
    <main class="container-fluid m-auto mt-3">       
-        <form class="needs-validations border row">
+        <form class="needs-validation border row">
             <div class="row m-0 mb-2" style="background-color:#010239;width:100vw;">
                 <h1 class="text-center text-light h2 my-2 ">Formulaire de saisie d'un prêt</h1>
             </div>
