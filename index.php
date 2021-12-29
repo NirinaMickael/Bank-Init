@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <title>formulaire</title>
 </head>
 <body>
   <main class="container-fluid">
-      <button class="btn btn-prmiray">remplir le formulaire</button>
+      <a href="assets/dynamic/form.php" class="btn btn-primary">remplir la formulaire</a>
   </main>
 </body

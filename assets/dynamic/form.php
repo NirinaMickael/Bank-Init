@@ -9,12 +9,15 @@
     <title>formulaire</title>
 </head>
 <body>
-   <form class="needs-validations">
-        <div class="row form-group my-2">
-            <label for="fname">Nom</label>
-            <input type="text" name="fname" id="fname" class="form-control">           
-        </div>
-        <button class="btn btn-primary">soumettre</button>
-   </form>
+   <main class="container-fluid m-auto">
+        <form class="needs-validations border">
+            <label class="form-label" for="responsable">Responsable:</label>
+            <select class="form-select form-check"  id="responsable">
+                <option value="1">Agent1</option>
+                <option value="2">Agent2</option>
+                <option value="3">Agent3</option>
+            </select>
+        </form>
+   </main>
 </body>
 </html>
