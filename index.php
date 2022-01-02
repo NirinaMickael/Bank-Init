@@ -9,5 +9,5 @@
     <title>list</title>
 </head>
 <body>
-<?php require('assets/dynamic/list.php')?>
+<?php require('assets/dynamic/form.php')?>
 </body>
