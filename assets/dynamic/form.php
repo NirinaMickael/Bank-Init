@@ -1,3 +1,4 @@
+<?php require('assets/dynamic/header.php')?>
 <main class="container-fluid m-auto mt-3 container_form">       
         <form class="needs-validation border row">
             <div class="row m-0 mb-2  bg-gray">

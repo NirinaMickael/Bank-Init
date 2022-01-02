@@ -1,5 +1,5 @@
 <?php
-    function tableTitle(){
+    function tableTitleHead(){
         return <<<HTML
             <tr>
                 <th>Nom</th>

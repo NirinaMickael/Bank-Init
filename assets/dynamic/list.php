@@ -1,8 +1,8 @@
-<?php  require_once('functionlist.php')?>
+<?php require('assets/dynamic/header.php')?>
 <main class="container-fluid table-responsive">
     <table class="table table-striped table-bordered">
         <thead>
-        <?php echo tableTitle()?>  
+        <?php echo tableTitleHead()?>  
         </thead>
         <tbody>
             <tr>
@@ -39,7 +39,7 @@
             </tr>
             <tr>
                 <td>Branden Wagner</td>
-                <td>Software Engineer<</td>
+                <td>Software Engineer</td>
                 <td>San Francisco</td>
                 <td>28</td>
                 <td>2011/06/07</td>
@@ -55,7 +55,7 @@
             </tr>
             <tr>
                 <td>Bruno Nash</td>
-                <td>Software Engineer<</td>
+                <td>Software Engineer</td>
                 <td>London</td>
                 <td>38</td>
                 <td>2011/05/03</td>
@@ -87,7 +87,7 @@
             </tr>
         </tbody>
         <tfoot>
-            <?php echo tableTitle()?> 
+            <?php echo tableTitleHead()?> 
         </tfoot>
     </table>
 </main>
