@@ -1,4 +1,4 @@
-<table class="container-fluid table table-striped table-bordered table-responsive">
+<table class="table table-striped table-bordered table-responsive-sm">
         <thead>
         <?php echo tableTitleHead()?>  
         </thead>

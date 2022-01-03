@@ -2,17 +2,17 @@
 <body>
 <main class="container-fluid">
     <div class="container-fluid my-3">
-        <div class="col-12 col-md-6 my-1">
+        <div class="my-3" style="float:left;">
             <label for="show">Show</label>
             <input type="number" name="show" id="show" min="1" max="10">
             <span>entiries</span>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-md-end my-1">
+        <div class="my-3" style="float:right;">
             <label for="show">Search:</label>
             <input type="search" name="search" id="search" class="ml-2">
         </div>
     </div>
-    <div class="container-fluid" data-ride="carousel">    
+    <div class="container-fluid " data-ride="carousel">    
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <?php require('assets/dynamic/table.php')?>
