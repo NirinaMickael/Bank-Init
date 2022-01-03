@@ -9,4 +9,3 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <title>list</title>
 </head>
-<body>

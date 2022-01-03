@@ -17,4 +17,26 @@ form .bg-gray {
 tr th {
   font-weight: 500;
 }
+
+/*Carousel*/
+.carousel-Control {
+  background-color: #0084ff;
+  border: 1px solid blanchedalmond;
+}
+
+.listnumber {
+  float: right;
+}
+
+.listnumber li, .listnumber a {
+  border: 1px solid rgba(112, 111, 111, 0.411);
+}
+
+.active {
+  color: white;
+}
+
+.Btn {
+  border: 1px solid rgba(112, 111, 111, 0.411);
+}
 /*# sourceMappingURL=style.css.map */
