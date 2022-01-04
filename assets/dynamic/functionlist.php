@@ -4,8 +4,12 @@ function printItemTable($value){
             <td>$value</td>
 HTML;
 }
+function triData(&$data,$type,$key){
+    $columns = array_column($data,$key);
+    array_multisort($columns,$type,$data);
+}
 $data = [
-  [
+    [
         "Name" => "Airi Satou",
         "Position" => "Accountan",
         "Office" => "tokyo",
