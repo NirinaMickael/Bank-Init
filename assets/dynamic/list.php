@@ -30,13 +30,13 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li class="page-item">
-                <a href="#" class="page-link border-0">1</a>
+            <li class="page-item ">
+                <a href="#" class="page-link border-0 Active">1</a>
             </li>
             <li class="page-item">
                 <a href="#" class="page-link border-0">2</a>
             </li>
-            <li class="page-item">
+            <li class="page-item ">
                 <a href="#" class="page-link border-0">...</a>
             </li>
             <li class="page-item">

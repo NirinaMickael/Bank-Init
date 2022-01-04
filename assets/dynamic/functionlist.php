@@ -1,17 +1,4 @@
 <?php
-/*titre des tableaux*/
-function tableTitleHead(){
-    return <<<HTML
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
-        </tr>
-HTML;
-}
 function printItemTable($value){
     return <<<HTML
             <td>$value</td>

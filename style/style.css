@@ -14,11 +14,19 @@ form .bg-gray {
   font-size: 2em;
 }
 
+/********LIST********/
+.minwidth {
+  min-width: 850px;
+}
+
 tr th {
   font-weight: 500;
 }
 
-/********LIST********/
+tr th a {
+  color: #0f0f0f !important;
+}
+
 .float-right {
   float: right;
 }
@@ -27,15 +35,12 @@ tr th {
   float: left;
 }
 
-.active {
-  color: white;
+.Active {
+  background-color: #178309 !important;
+  color: white !important;
 }
 
-.Btn {
-  border: 1px solid rgba(112, 111, 111, 0.411);
-}
-
-.noborder {
-  background-color: blueviolet;
+.size {
+  width: 7px;
 }
 /*# sourceMappingURL=style.css.map */
