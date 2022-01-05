@@ -34,6 +34,9 @@ tr{
     background-color: rgba(32, 161, 12, 0.74) !important;
     color: white !important;
 }
-#arrowup{
-    color: rgb(196, 3, 3) !important;
+.arrowActive{
+    color: aqua;    
+}
+.arrow{
+    cursor: pointer;
 }

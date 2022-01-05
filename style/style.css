@@ -40,7 +40,11 @@ tr th a {
   color: white !important;
 }
 
-#arrowup {
-  color: #c40303 !important;
+.arrowActive {
+  color: aqua;
+}
+
+.arrow {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

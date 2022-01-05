@@ -29,7 +29,7 @@ let data = [
     {
         "Name" : "Airi Satou",
         "Position" : "Accountan",
-        "Office" : "tokyo",
+        "Office" : "Tokyo",
         "Age" : "33",
         "Start date" : "2008/11/28",
         "Salary" : "$162,700"
@@ -100,11 +100,91 @@ let data = [
     },
     {
         "Name" : "Cedric Kelly",
-        "Position" : "Cedric Kelly",
+        "Position" : "Senior Javascript Developper",
         "Office" : "Edinburgh",
         "Age" : "22",
         "Start date" : "2012/03/29",
         "Salary" : "$433,060"
+    },
+    {
+        "Name" : "Pairi Satou",
+        "Position" : "Accountan",
+        "Office" : "Itali",
+        "Age" : "31",
+        "Start date" : "2016/01/18",
+        "Salary" : "$672,700"
+    },
+    {
+        "Name" : "Angelo Ramos",
+        "Position" : "Chief Executive Officier(CEO)",
+        "Office" : "Rome",
+        "Age" : "27",
+        "Start date" : "2012/21/09",
+        "Salary" : "$1,000,000"
+    },
+    {
+        "Name" : "Ashton jhon",
+        "Position" : "Junior Technical Author",
+        "Office" : "San Francisco",
+        "Age" : "56",
+        "Start date" : "2009/06/11",
+        "Salary" : "$90,000"
+    },
+    {
+        "Name" : "Bradley Ston",
+        "Position" : "Software Engineer",
+        "Office" : "London",
+        "Age" : "54",
+        "Start date" : "2012/05/12",
+        "Salary" : "$172,000"
+    },
+    {
+        "Name" : "Kevin Stone",
+        "Position" : "Software Engineer",
+        "Office" : "San Francisco",
+        "Age" : "22",
+        "Start date" : "2011/06/07",
+        "Salary" : "$100,850"
+    },
+    {
+        "Name" : "Anitha Erica",
+        "Position" : "Integration Specialist",
+        "Office" : "New York",
+        "Age" : "51",
+        "Start date" : "2015/12/02",
+        "Salary" : "$982,000"
+    },
+    {
+        "Name" : "Bruno Mars",
+        "Position" : "Software Engineer",
+        "Office" : "Etats-Unis",
+        "Age" : "39",
+        "Start date" : "2017/05/03",
+        "Salary" : "$233,500"
+    },
+    {
+        "Name" : "Erich Vance",
+        "Position" : "Pre-Sales Support",
+        "Office" : "New York",
+        "Age" : "40",
+        "Start date" : "2011/12/12",
+        "Salary" : "$106,450"
+    },
+    {
+        "Name" : "Cara Stevens",
+        "Position" : "Sales Assistant",
+        "Office" : "New York",
+        "Age" : "40",
+        "Start date" : "2011/06/06",
+        "Salary" : "$745,600"
+    },
+    {
+        "Name" : "Kelly Dar",
+        "Position" : "Doctor",
+        "Office" : "Edinburgh",
+        "Age" : "28",
+        "Start date" : "2013/03/29",
+        "Salary" : "$43,060"
     }
 ],arrows= document.querySelectorAll('th');
 let objtable = new TableLIst(data);
@@ -113,6 +193,7 @@ arrows.forEach( arrow => {
     if(arrow.parentNode.parentNode.nodeName==="THEAD"){
         let span = arrow.childNodes[3];
         span.childNodes.forEach(arrowbtn =>{
+            arrowbtn.classList.remove('arrowActive');
             arrowbtn.addEventListener('click',(e)=>{
                 if(e.target.id=="arrowdown"){
                     key=span.previousSibling.previousSibling.textContent;
