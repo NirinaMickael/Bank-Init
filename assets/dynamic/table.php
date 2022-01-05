@@ -2,7 +2,6 @@
         <thead>
         <tr>
             <th>
-            <ion-icon name="reorder-four-outline"></ion-icon>
                 <a>Name</a>
                 <span class="float-right">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" id="arrowup"  class="bi bi-arrow-up" viewBox="0 0 16 16">
