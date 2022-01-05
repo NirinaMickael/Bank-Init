@@ -11,7 +11,7 @@
             </th>            
             <th>
                 <a>Date du prêt</a>
-                <span cclass="d-grid d-md-block float-right"><span id="arrowup" class="arrow">&xutri;</span><span id="arrowdown" class="arrow">&xdtri;</span></span>
+                <span class="d-grid d-md-block float-right"><span id="arrowup" class="arrow">&xutri;</span><span id="arrowdown" class="arrow">&xdtri;</span></span>
             </th>            
             <th>
                 <a>Date fin de remboursement</a>

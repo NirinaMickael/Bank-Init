@@ -4,6 +4,23 @@ class TableLIst{
     constructor(data){
         this.data=data; 
     }
+    addboutton=function(tbody){
+        tbody.childNodes.forEach(tr=>{
+            if(tr.nodeName=="TR"){
+                let btnV = document.createElement('boutton');
+                btnV.classList='btn btn-primary';
+                btnV.innerText="View";
+                let btnS = document.createElement('boutton');
+                btnS.classList='btn btn-danger';
+                btnS.innerText="Del";
+                let td =document.createElement('td');
+                td.appendChild(btnV);
+                td.classList='d-flex justify-content-around'
+                td.appendChild(btnS);
+                tr.appendChild(td);
+            }
+        })
+    }
     displayTable =function(tbody){
     tbody=tbody.childNodes;
         for (const key in tbody) {
@@ -133,7 +150,7 @@ let data = [
 ],arrows= document.querySelectorAll('thead tr th');
 let objtable = new TableLIst(data);
 objtable.printListTable();
-objtable.displayTable(tbody);
+objtable.addboutton(tbody);
 arrows.forEach((value,index) =>{
     if(index<4){
         value.childNodes[3].childNodes.forEach(arrowbtn=>{
@@ -143,13 +160,13 @@ arrows.forEach((value,index) =>{
                      objtable.triListTableDSC(key);
                      objtable.deleteListtable();
                      objtable.printListTable();
-                     objtable.displayTable(tbody);
+                     objtable.addboutton(tbody);
                  }else{
                     key=value.childNodes[3].previousSibling.previousSibling.textContent;
                      objtable.triListTableASC(key);
                      objtable.deleteListtable();
                      objtable.printListTable();
-                     objtable.displayTable(tbody);
+                     objtable.addboutton(tbody);
              }
             })
          })
@@ -184,21 +201,5 @@ containItempagination.forEach(element=>{
                 break;
             }
         })
-    }
-})
-/*AJOUTER DES BOUTONS*/
-tbody.childNodes.forEach(tr=>{
-    if(tr.nodeName=="TR"){
-        let btnV = document.createElement('boutton');
-        btnV.classList='btn btn-primary';
-        btnV.innerText="View";
-        let btnS = document.createElement('boutton');
-        btnS.classList='btn btn-danger';
-        btnS.innerText="Del";
-        let td =document.createElement('td');
-        td.appendChild(btnV);
-        td.classList='d-flex justify-content-around'
-        td.appendChild(btnS);
-        tr.appendChild(td);
     }
 })

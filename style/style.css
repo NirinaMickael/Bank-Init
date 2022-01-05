@@ -15,10 +15,6 @@ form .bg-gray {
 }
 
 /********LIST********/
-.minwidth {
-  min-width: 850px;
-}
-
 tr th {
   font-weight: 500;
 }

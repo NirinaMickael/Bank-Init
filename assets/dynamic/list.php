@@ -13,10 +13,8 @@
         </div>
     </div>
     <div class="container-fluid " data-ride="carousel">    
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <?php require('assets/dynamic/table.php')?>
-            </div>
+        <div class="container-fluid">
+            <?php require('assets/dynamic/table.php')?>
         </div>
         <div class="float-left">
             <p class="h6">Showing <span class="startnumber">1</span> to <span class="endnumber">10</span> of <span class="totalnumber">57</span> entries</p>
