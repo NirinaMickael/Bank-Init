@@ -1,4 +1,3 @@
-<?php  require_once('functionlist.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
