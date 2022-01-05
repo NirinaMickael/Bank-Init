@@ -18,10 +18,10 @@
                 <?php require('assets/dynamic/table.php')?>
             </div>
             <div class="carousel-item">
-                <?php require('assets/dynamic/table.php')?>
+                
             </div>
             <div class="carousel-item">
-                <?php require('assets/dynamic/table.php')?>
+                
             </div>
         </div>
         <ul class="pagination float-right">

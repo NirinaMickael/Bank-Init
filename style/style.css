@@ -36,11 +36,7 @@ tr th a {
 }
 
 .Active {
-  background-color: #178309 !important;
+  background-color: rgba(32, 161, 12, 0.74) !important;
   color: white !important;
-}
-
-.size {
-  width: 7px;
 }
 /*# sourceMappingURL=style.css.map */

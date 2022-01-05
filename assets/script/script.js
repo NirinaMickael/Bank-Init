@@ -1,4 +1,30 @@
-$data = [
+class TableLIst{
+    constructor(data){
+        this.data=data; 
+    }
+    printListTable=function(){
+        let tbody =document.querySelector('tbody');
+        for (const value of this.data) {
+            let tr = document.createElement('tr');
+            for (const key in value) {
+                let td = document.createElement('td');
+                let text =document.createTextNode(value[key]);
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+        }
+    }
+    deleteListtable=function(){
+        let tbody =document.querySelector('tbody');
+        while(tbody.firstChild){
+            tbody.removeChild(tbody.firstChild);
+        }
+    }
+    triListTableASC=(key) => this.data.sort((a,b)=>(a[key] > b [key]) ? 1 : 0)
+    triListTableDSC=(key) => this.data.sort((a,b)=>(a[key] < b [key]) ? 1 : 0)
+}
+let data = [
     {
         "Name" : "Airi Satou",
         "Position" : "Accountan",
@@ -9,7 +35,7 @@ $data = [
     },
     {
         "Name" : "Angelica Ramos",
-        "Position" : "hief Executive Officier(CEO)",
+        "Position" : "Chief Executive Officier(CEO)",
         "Office" : "London",
         "Age" : "47",
         "Start date" : "2009/01/09",
@@ -79,4 +105,26 @@ $data = [
         "Start date" : "2012/03/29",
         "Salary" : "$433,060"
     }
-];
+],arrows= document.querySelectorAll('th');
+let objtable = new TableLIst(data);
+objtable.printListTable();
+arrows.forEach( arrow => {
+    if(arrow.parentNode.parentNode.nodeName==="THEAD"){
+        let span = arrow.childNodes[3];
+        span.childNodes.forEach(arrowbtn =>{
+            arrowbtn.addEventListener('click',(e)=>{
+                if(e.target.id=="arrowdown"){
+                    key=span.previousSibling.previousSibling.textContent;
+                    objtable.triListTableDSC(key);
+                    objtable.deleteListtable();
+                    objtable.printListTable();
+                }else{
+                    key=span.previousSibling.previousSibling.textContent;
+                    objtable.triListTableASC(key);
+                    objtable.deleteListtable();
+                    objtable.printListTable();
+                }
+            })
+        })
+    }
+});
