@@ -1,3 +1,4 @@
+/*charger l'icon*/
 class TableLIst{
     constructor(data){
         this.data=data; 

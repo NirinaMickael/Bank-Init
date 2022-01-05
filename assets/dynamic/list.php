@@ -24,6 +24,9 @@
                 
             </div>
         </div>
+        <div class="float-left">
+            <p class="h6">Showing <span class="startnumber">1</span> to <span class="endnumber">10</span> of <span class="totalnumber">57</span> entries</p>
+        </div>
         <ul class="pagination float-right">
             <li class="page-item">
                 <a href="#" class="page-link border-0" aria-label="previous">
