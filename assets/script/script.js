@@ -186,3 +186,19 @@ containItempagination.forEach(element=>{
         })
     }
 })
+/*AJOUTER DES BOUTONS*/
+tbody.childNodes.forEach(tr=>{
+    if(tr.nodeName=="TR"){
+        let btnV = document.createElement('boutton');
+        btnV.classList='btn btn-primary';
+        btnV.innerText="View";
+        let btnS = document.createElement('boutton');
+        btnS.classList='btn btn-danger';
+        btnS.innerText="Del";
+        let td =document.createElement('td');
+        td.appendChild(btnV);
+        td.classList='d-flex justify-content-around'
+        td.appendChild(btnS);
+        tr.appendChild(td);
+    }
+})
