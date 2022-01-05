@@ -20,7 +20,9 @@ tr{
     th{
         font-weight:500;
         a{
-            color: rgb(15, 15, 15) !important;
+            color: rgb(0, 0, 0) !important;
+            font-size: 1rem !important;
+            
         }
     }
 }
@@ -35,8 +37,9 @@ tr{
     color: white !important;
 }
 .arrowActive{
-    color: aqua;    
+    color: rgb(12, 223, 65);    
 }
 .arrow{
     cursor: pointer;
+    font-size: x-small;
 }

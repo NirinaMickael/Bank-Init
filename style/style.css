@@ -24,7 +24,8 @@ tr th {
 }
 
 tr th a {
-  color: #0f0f0f !important;
+  color: black !important;
+  font-size: 1rem !important;
 }
 
 .float-right {
@@ -41,10 +42,11 @@ tr th a {
 }
 
 .arrowActive {
-  color: aqua;
+  color: #0cdf41;
 }
 
 .arrow {
   cursor: pointer;
+  font-size: x-small;
 }
 /*# sourceMappingURL=style.css.map */

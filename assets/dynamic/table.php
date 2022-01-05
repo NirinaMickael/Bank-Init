@@ -1,48 +1,23 @@
-<table id="table" class="table table-striped table-bordered table-responsive table-sm" cellspacing="0">
+<table id="table" class="table table-striped table-bordered table-responsive table-sm" >
         <thead>
         <tr>
             <th>
-                <a>Name</a>
-                <span class="float-right">
-                    <span id="arrowup" class=" arrow arrowActive">&xutri;</span>
-                    <span id="arrowdown"  class="arrow">&xdtri;</span>
-                </span>
+                <a >Responsable</a>
+                <span class="d-grid d-md-block float-right"><span id="arrowup" class=" arrow arrowActive">&xutri;</span><span id="arrowdown"  class="arrow">&xdtri;</span></span>
             </th>
             <th>
-                <a>Position</a>
-                <span class="float-right">
-                    <span id="arrowup" class="arrow">&xutri;</span>
-                    <span id="arrowdown" class="arrow">&xdtri;</span>
-                </span>
+                <a>Montant prêt</a>
+                <span class="d-grid d-md-block float-right"><span id="arrowup" class="arrow">&xutri;</span><span id="arrowdown" class="arrow">&xdtri;</span></span>
             </th>            
             <th>
-                <a>Office</a>
-                <span class="float-right">
-                    <span id="arrowup" class="arrow">&xutri;</span>
-                    <span id="arrowdown" class="arrow">&xdtri;</span>
-                </span>
+                <a>Date du prêt</a>
+                <span cclass="d-grid d-md-block float-right"><span id="arrowup" class="arrow">&xutri;</span><span id="arrowdown" class="arrow">&xdtri;</span></span>
             </th>            
             <th>
-                <a>Age</a>
-                <span class="float-right">
-                    <span id="arrowup" class="arrow">&xutri;</span>
-                    <span id="arrowdown" class="arrow">&xdtri;</span>
-                </span> 
-            </th>           
-            <th>
-                <a>Start Date</a>
-                <span class="float-right">
-                    <span id="arrowup" class="arrow">&xutri;</span>
-                    <span id="arrowdown" class="arrow">&xdtri;</span>
-                </span>
-            </th>
-            <th>
-                <a>Salary</a>
-                <span class="float-right">
-                    <span id="arrowup" class="arrow">&xutri;</span>
-                    <span id="arrowdown" class="arrow">&xdtri;</span>
-                </span>
-            </th>
+                <a>Date fin de remboursement</a>
+                <span class="d-grid d-md-block float-right" ><span id="arrowup" class="arrow">&xutri;</span><span id="arrowdown" class="arrow">&xdtri;</span></span> 
+            </th> 
+            <th>Action</th>          
         </tr>
         </thead>
         <tbody>    
@@ -50,13 +25,11 @@
             
         <tfoot>
         <tr>
-            <th>Name
-            </th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>Responsable</th>
+            <th>Montant prêt</th>
+            <th>Date du prêt</th>
+            <th>Date fin de remboursement</th>
+            <th>Action</th>
         </tr>
         </tfoot>
     </table>

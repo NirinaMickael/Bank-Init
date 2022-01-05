@@ -1,7 +1,19 @@
-/*charger l'icon*/
+/*chger l'icon*/
+let tbody=document.querySelector('tbody');
 class TableLIst{
     constructor(data){
         this.data=data; 
+    }
+    displayTable =function(tbody){
+    tbody=tbody.childNodes;
+        for (const key in tbody) {
+            if (Object.hasOwnProperty.call(tbody, key)) {
+               const element = tbody[key];
+                if(key>10){
+                    element.style.display="none";
+                }
+            }
+        }
     }
     printListTable=function(){
         let tbody =document.querySelector('tbody');
@@ -27,186 +39,150 @@ class TableLIst{
 }
 let data = [
     {
-        "Name" : "Airi Satou",
-        "Position" : "Accountan",
-        "Office" : "Tokyo",
-        "Age" : "33",
-        "Start date" : "2008/11/28",
-        "Salary" : "$162,700"
+        "Responsable" : "Airi Satou",
+        "Montant prêt" : "14,700 AR",
+        "Date du prêt" : "2022/01/28",
+        "Date fin de remboursement": "2022/03/08"
     },
     {
-        "Name" : "Angelica Ramos",
-        "Position" : "Chief Executive Officier(CEO)",
-        "Office" : "London",
-        "Age" : "47",
-        "Start date" : "2009/01/09",
-        "Salary" : "$1,200,000"
+        "Responsable" : "Kely Satou",
+        "Montant prêt" : "60,000 AR",
+        "Date du prêt" : "2023/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Ashton Cox",
-        "Position" : "Junior Technical Author",
-        "Office" : "San Francisco",
-        "Age" : "66",
-        "Start date" : "2009/01/12",
-        "Salary" : "$86,000"
+        "Responsable" : "Satou Mamadhou",
+        "Montant prêt" : "10,000 AR",
+        "Date du prêt" : "2022/02/28",
+        "Date fin de remboursement": "2022/06/08"
     },
     {
-        "Name" : "Bradley Greer",
-        "Position" : "Software Engineer",
-        "Office" : "London",
-        "Age" : "41",
-        "Start date" : "2012/10/13",
-        "Salary" : "$132,000"
+        "Responsable" : "Kevin jhon",
+        "Montant prêt" : "72,000 AR",
+        "Date du prêt" : "2022/06/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Branden Wagner",
-        "Position" : "Software Engineer",
-        "Office" : "San Francisco",
-        "Age" : "28",
-        "Start date" : "2011/06/07",
-        "Salary" : "$206,850"
+        "Responsable" : "Salah",
+        "Montant prêt" : "30,000 AR",
+        "Date du prêt" : "2022/02/14",
+        "Date fin de remboursement": "2022/12/31"
     },
     {
-        "Name" : "Brielle Williamson",
-        "Position" : "Integration Specialist",
-        "Office" : "New York",
-        "Age" : "61",
-        "Start date" : "2012/12/02",
-        "Salary" : "$372,000"
+        "Responsable" : "Ronaldo ",
+        "Montant prêt" : "200,000 AR",
+        "Date du prêt" : "2022/01/08",
+        "Date fin de remboursement": "2023/01/08"
+    },
+
+    {
+        "Responsable" : "Ash Kev",
+        "Montant prêt" : "70,700 AR",
+        "Date du prêt" : "2022/10/15",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Bruno Nash",
-        "Position" : "Software Engineer",
-        "Office" : "London",
-        "Age" : "38",
-        "Start date" : "2011/05/03",
-        "Salary" : "$163,500"
+        "Responsable" : "Franck Dol",
+        "Montant prêt" : "20,000 AR",
+        "Date du prêt" : "2022/05/08",
+        "Date fin de remboursement": "2022/05/18"
     },
     {
-        "Name" : "Cesar Vance",
-        "Position" : "Pre-Sales Support",
-        "Office" : "New York",
-        "Age" : "46",
-        "Start date" : "2011/12/12",
-        "Salary" : "$106,450"
+        "Responsable" : "Airi Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Cara Stevens",
-        "Position" : "Sales Assistant",
-        "Office" : "New York",
-        "Age" : "46",
-        "Start date" : "2011/12/06",
-        "Salary" : "$145,600"
+        "Responsable" : "Airi Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Cedric Kelly",
-        "Position" : "Senior Javascript Developper",
-        "Office" : "Edinburgh",
-        "Age" : "22",
-        "Start date" : "2012/03/29",
-        "Salary" : "$433,060"
+        "Responsable" : "Airi Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Pairi Satou",
-        "Position" : "Accountan",
-        "Office" : "Itali",
-        "Age" : "31",
-        "Start date" : "2016/01/18",
-        "Salary" : "$672,700"
+        "Responsable" : "Airi Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Angelo Ramos",
-        "Position" : "Chief Executive Officier(CEO)",
-        "Office" : "Rome",
-        "Age" : "27",
-        "Start date" : "2012/21/09",
-        "Salary" : "$1,000,000"
+        "Responsable" : "Rii Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Name" : "Ashton jhon",
-        "Position" : "Junior Technical Author",
-        "Office" : "San Francisco",
-        "Age" : "56",
-        "Start date" : "2009/06/11",
-        "Salary" : "$90,000"
+        "Responsable" : "Ato Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     },
+
     {
-        "Name" : "Bradley Ston",
-        "Position" : "Software Engineer",
-        "Office" : "London",
-        "Age" : "54",
-        "Start date" : "2012/05/12",
-        "Salary" : "$172,000"
-    },
-    {
-        "Name" : "Kevin Stone",
-        "Position" : "Software Engineer",
-        "Office" : "San Francisco",
-        "Age" : "22",
-        "Start date" : "2011/06/07",
-        "Salary" : "$100,850"
-    },
-    {
-        "Name" : "Anitha Erica",
-        "Position" : "Integration Specialist",
-        "Office" : "New York",
-        "Age" : "51",
-        "Start date" : "2015/12/02",
-        "Salary" : "$982,000"
-    },
-    {
-        "Name" : "Bruno Mars",
-        "Position" : "Software Engineer",
-        "Office" : "Etats-Unis",
-        "Age" : "39",
-        "Start date" : "2017/05/03",
-        "Salary" : "$233,500"
-    },
-    {
-        "Name" : "Erich Vance",
-        "Position" : "Pre-Sales Support",
-        "Office" : "New York",
-        "Age" : "40",
-        "Start date" : "2011/12/12",
-        "Salary" : "$106,450"
-    },
-    {
-        "Name" : "Cara Stevens",
-        "Position" : "Sales Assistant",
-        "Office" : "New York",
-        "Age" : "40",
-        "Start date" : "2011/06/06",
-        "Salary" : "$745,600"
-    },
-    {
-        "Name" : "Kelly Dar",
-        "Position" : "Doctor",
-        "Office" : "Edinburgh",
-        "Age" : "28",
-        "Start date" : "2013/03/29",
-        "Salary" : "$43,060"
+        "Responsable" : "Zoro Satou",
+        "Montant prêt" : "162,700 AR",
+        "Date du prêt" : "2022/11/28",
+        "Date fin de remboursement": "2022/12/28"
     }
-],arrows= document.querySelectorAll('th');
+],arrows= document.querySelectorAll('thead tr th');
 let objtable = new TableLIst(data);
 objtable.printListTable();
-arrows.forEach( arrow => {
-    if(arrow.parentNode.parentNode.nodeName==="THEAD"){
-        let span = arrow.childNodes[3];
-        span.childNodes.forEach(arrowbtn =>{
-            arrowbtn.classList.remove('arrowActive');
+objtable.displayTable(tbody);
+arrows.forEach((value,index) =>{
+    if(index<4){
+        value.childNodes[3].childNodes.forEach(arrowbtn=>{
             arrowbtn.addEventListener('click',(e)=>{
-                if(e.target.id=="arrowdown"){
-                    key=span.previousSibling.previousSibling.textContent;
-                    objtable.triListTableDSC(key);
-                    objtable.deleteListtable();
-                    objtable.printListTable();
-                }else{
-                    key=span.previousSibling.previousSibling.textContent;
-                    objtable.triListTableASC(key);
-                    objtable.deleteListtable();
-                    objtable.printListTable();
-                }
+                 if(e.target.id=="arrowdown"){
+                     key=value.childNodes[3].previousSibling.previousSibling.textContent;
+                     objtable.triListTableDSC(key);
+                     objtable.deleteListtable();
+                     objtable.printListTable();
+                     objtable.displayTable(tbody);
+                 }else{
+                    key=value.childNodes[3].previousSibling.previousSibling.textContent;
+                     objtable.triListTableASC(key);
+                     objtable.deleteListtable();
+                     objtable.printListTable();
+                     objtable.displayTable(tbody);
+             }
             })
+         })
+    }
+})
+/*
+ 
+*/
+/*PAGINATION*/
+let containItempagination = document.querySelector('.containItempag').childNodes; 
+posActive = 3;
+containItempagination.forEach(element=>{
+    if(element.nodeType!=3){
+        element.addEventListener('click',el =>{
+            switch (el.target.nodeResponsable) {
+                case "BUTTON":
+                    if(el.tget.classResponsable.includes("btnPrev")){
+                       if(posActive!=3){
+                           containItempagination[posActive].childNodes[0].classList.remove('Active');
+                           posActive=posActive-2;
+                           containItempagination[posActive].childNodes[0].classList.add('Active');
+                       }
+                    }else{
+                        if(posActive!=5){
+                            containItempagination[posActive].childNodes[0].classList.remove('Active');
+                            posActive=posActive+2;
+                            containItempagination[posActive].childNodes[0].classList.add('Active');
+                        }
+                    }
+                break;
+                default:
+                break;
+            }
         })
     }
-});
+})
