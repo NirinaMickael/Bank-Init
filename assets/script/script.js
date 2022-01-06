@@ -4,23 +4,6 @@ class TableLIst{
     constructor(data){
         this.data=data; 
     }
-    addboutton=function(tbody){
-        tbody.childNodes.forEach(tr=>{
-            if(tr.nodeName=="TR"){
-                let btnV = document.createElement('boutton');
-                btnV.classList='btn btn-primary';
-                btnV.innerText="View";
-                let btnS = document.createElement('boutton');
-                btnS.classList='btn btn-danger';
-                btnS.innerText="Del";
-                let td =document.createElement('td');
-                td.appendChild(btnV);
-                td.classList='d-flex justify-content-around'
-                td.appendChild(btnS);
-                tr.appendChild(td);
-            }
-        })
-    }
     displayTable =function(tbody){
     tbody=tbody.childNodes;
         for (const key in tbody) {
@@ -33,16 +16,18 @@ class TableLIst{
         }
     }
     printListTable=function(){
-        let tbody =document.querySelector('tbody');
+        let tbody =document.querySelector('tbody'),
+        tr=tbody.childNodes,i=1;
         for (const value of this.data) {
-            let tr = document.createElement('tr');
             for (const key in value) {
                 let td = document.createElement('td');
                 let text =document.createTextNode(value[key]);
                 td.appendChild(text);
-                tr.appendChild(td);
+                tr[i].insertBefore(td,tr[i].lastChild.previousSibling.previousSibling);
             }
-            tbody.appendChild(tr);
+            if(i<tr.length){
+                i=i+2;
+            }
         }
     }
     deleteListtable=function(){
@@ -150,7 +135,6 @@ let data = [
 ],arrows= document.querySelectorAll('thead tr th');
 let objtable = new TableLIst(data);
 objtable.printListTable();
-objtable.addboutton(tbody);
 arrows.forEach((value,index) =>{
     if(index<4){
         value.childNodes[3].childNodes.forEach(arrowbtn=>{
@@ -160,13 +144,11 @@ arrows.forEach((value,index) =>{
                      objtable.triListTableDSC(key);
                      objtable.deleteListtable();
                      objtable.printListTable();
-                     objtable.addboutton(tbody);
                  }else{
                     key=value.childNodes[3].previousSibling.previousSibling.textContent;
                      objtable.triListTableASC(key);
                      objtable.deleteListtable();
                      objtable.printListTable();
-                     objtable.addboutton(tbody);
              }
             })
          })

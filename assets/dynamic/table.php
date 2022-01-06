@@ -20,9 +20,19 @@
             <th>Action</th>          
         </tr>
         </thead>
-        <tbody>    
+        <tbody>
+            <?php for ($i=0; $i < 15; $i++){ 
+                echo <<<HTML
+                    <tr>
+                        <td class="d-flex justify-content-around">
+                            <button class="btn btn-primary"><img src="assets/images/delete-16.ico" alt="del" srcset=""></button>
+                            <button class="btn btn-danger"><img src="assets/images/eye-3-16.ico" alt="eye" srcset=""></button>
+                        </td>
+                    </tr>
+HTML;    
+                }
+            ?>
         </tbody>
-            
         <tfoot>
         <tr>
             <th>Responsable</th>
