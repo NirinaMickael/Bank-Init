@@ -1,40 +1,32 @@
 /*chger l'icon*/
 let tbody=document.querySelector('tbody');
 class TableLIst{
-    constructor(data){
-        this.data=data; 
+    constructor(data,tbody){
+        this.data=data;
+        this.tbody=tbody; 
     }
-    displayTable =function(tbody){
-    tbody=tbody.childNodes;
-        for (const key in tbody) {
-            if (Object.hasOwnProperty.call(tbody, key)) {
-               const element = tbody[key];
-                if(key>10){
-                    element.style.display="none";
-                }
-            }
-        }
-    }
-    printListTable=function(){
-        let tbody =document.querySelector('tbody'),
-        tr=tbody.childNodes,i=1;
+    stateList=function(){
+        let tr=this.tbody.childNodes,i=1;
         for (const value of this.data) {
             for (const key in value) {
                 let td = document.createElement('td');
                 let text =document.createTextNode(value[key]);
                 td.appendChild(text);
-                tr[i].insertBefore(td,tr[i].lastChild.previousSibling.previousSibling);
+                tr[i].insertBefore(td,tr[i].lastChild);
             }
             if(i<tr.length){
                 i=i+2;
             }
         }
     }
-    deleteListtable=function(){
-        let tbody =document.querySelector('tbody');
-        while(tbody.firstChild){
-            tbody.removeChild(tbody.firstChild);
-        }
+    newStateList=function(){
+        this.tbody.childNodes.forEach(tr=>{
+            if(tr.nodeName=="TR"){
+               while(tr.firstChild.className!="d-flex justify-content-around"){
+                    tr.removeChild(tr.firstChild);
+               }
+            }
+        })
     }
     triListTableASC=(key) => this.data.sort((a,b)=>(a[key] > b [key]) ? 1 : 0)
     triListTableDSC=(key) => this.data.sort((a,b)=>(a[key] < b [key]) ? 1 : 0)
@@ -90,25 +82,25 @@ let data = [
         "Date fin de remboursement": "2022/05/18"
     },
     {
-        "Responsable" : "Airi Satou",
+        "Responsable" : "Brayn kev",
         "Montant prêt" : "162,700 AR",
         "Date du prêt" : "2022/11/28",
         "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Responsable" : "Airi Satou",
+        "Responsable" : "Mickael ",
         "Montant prêt" : "162,700 AR",
         "Date du prêt" : "2022/11/28",
         "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Responsable" : "Airi Satou",
+        "Responsable" : "Henri",
         "Montant prêt" : "162,700 AR",
         "Date du prêt" : "2022/11/28",
         "Date fin de remboursement": "2022/12/28"
     },
     {
-        "Responsable" : "Airi Satou",
+        "Responsable" : "Justin bieber",
         "Montant prêt" : "162,700 AR",
         "Date du prêt" : "2022/11/28",
         "Date fin de remboursement": "2022/12/28"
@@ -133,22 +125,21 @@ let data = [
         "Date fin de remboursement": "2022/12/28"
     }
 ],arrows= document.querySelectorAll('thead tr th');
-let objtable = new TableLIst(data);
-objtable.printListTable();
+let objtable = new TableLIst(data,tbody);
+objtable.stateList();
 arrows.forEach((value,index) =>{
     if(index<4){
-        value.childNodes[3].childNodes.forEach(arrowbtn=>{
+        value.childNodes[2].childNodes.forEach(arrowbtn=>{
             arrowbtn.addEventListener('click',(e)=>{
+                objtable.newStateList();
                  if(e.target.id=="arrowdown"){
-                     key=value.childNodes[3].previousSibling.previousSibling.textContent;
+                     key=value.childNodes[2].previousSibling.previousSibling.textContent;
                      objtable.triListTableDSC(key);
-                     objtable.deleteListtable();
-                     objtable.printListTable();
+                     objtable.stateList();
                  }else{
-                    key=value.childNodes[3].previousSibling.previousSibling.textContent;
+                    key=value.childNodes[2].previousSibling.previousSibling.textContent;
                      objtable.triListTableASC(key);
-                     objtable.deleteListtable();
-                     objtable.printListTable();
+                     objtable.stateList();
              }
             })
          })

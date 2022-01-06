@@ -40,3 +40,11 @@ tr{
     cursor: pointer;
     font-size: x-small;
 }
+.show{
+    transition: all .3s ease-in;
+    display: none;
+}
+.hidden{
+    transition: all .3s ease-in;
+    display: block;
+}
