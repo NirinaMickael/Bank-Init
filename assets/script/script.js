@@ -1,14 +1,18 @@
-/*chger l'icon*/
+/*changer l'icon*/
+/* recuperer l'elemnent tbody de la page table.php*/
 let tbody=document.querySelector('tbody');
-class TableLIst{
+class TableList{
     constructor(data,tbody){
-        this.data=data;
+        this.data=data; 
         this.tbody=tbody; 
     }
+    /* Fonnction qui gère la liste*/
     stateList=function(){
+        /*tr : table row */
         let tr=this.tbody.childNodes,i=1;
         for (const value of this.data) {
             for (const key in value) {
+                /*creation des elements td dans tr*/
                 let td = document.createElement('td');
                 let text =document.createTextNode(value[key]);
                 td.appendChild(text);
@@ -19,6 +23,7 @@ class TableLIst{
             }
         }
     }
+    /*fontion qui gère la nouvelle etat de la liste*/
     newStateList=function(){
         this.tbody.childNodes.forEach(tr=>{
             if(tr.nodeName=="TR"){
@@ -28,7 +33,9 @@ class TableLIst{
             }
         })
     }
+    /*trie croissant des données de la table*/
     triListTableASC=(key) => this.data.sort((a,b)=>(a[key] > b [key]) ? 1 : 0)
+    /*trie décroissant des données de la table*/
     triListTableDSC=(key) => this.data.sort((a,b)=>(a[key] < b [key]) ? 1 : 0)
 }
 let data = [
@@ -124,11 +131,16 @@ let data = [
         "Date du prêt" : "2022/11/28",
         "Date fin de remboursement": "2022/12/28"
     }
-],arrows= document.querySelectorAll('thead tr th');
-let objtable = new TableLIst(data,tbody);
+];
+/*recuperer les "table head " de table*/
+let arrows= document.querySelectorAll('thead tr th');
+/*Un objet TableList*/
+let objtable = new TableList(data,tbody);
 objtable.stateList();
+/*Parourus chaque th de la table apart la derniere th qui se trouve au 4 ieme pos*/
 arrows.forEach((value,index) =>{
     if(index<4){
+        /* puis parcourus les enfants d'elemet span dans th*/
         value.childNodes[2].childNodes.forEach(arrowbtn=>{
             arrowbtn.addEventListener('click',(e)=>{
                 objtable.newStateList();
@@ -145,13 +157,14 @@ arrows.forEach((value,index) =>{
          })
     }
 })
-/*
- 
-*/
 /*PAGINATION*/
+
 let containItempagination = document.querySelector('.containItempag').childNodes; 
+/* position de la liste visible sur l'ecran*/
 posActive = 3;
+/* parcourus les enfants de la pagination*/
 containItempagination.forEach(element=>{
+    /*pou recuperer l'enfant de type balise*/
     if(element.nodeType!=3){
         element.addEventListener('click',el =>{
             switch (el.target.nodeResponsable) {
