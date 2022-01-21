@@ -6,29 +6,37 @@
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
-                    <label class="form-label " for="resp">Responsable</label>
-                        <select class="form-select form-check"  id="resp" required>
+                    <label class="form-label " for="responsable">Responsable</label>
+                        <select class="form-select form-check"  id="responsable" name="responsable" required>
                             <option value="1">Agent1</option>
                             <option value="2">Agent2</option>
                             <option value="3">Agent3</option>
                         </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label " for="dateduprêt">Date du prêt</label>
-                    <input type="date" class="form-control " id="dateduprêt" required>
+                    <label class="form-label " for="client">Client</label>
+                        <select class="form-select form-check"  id="client" name="client" required>
+                            <option value="1">General tobacco</option>
+                            <option value="2">Accès Banque</option>
+                            <option value="3">Agrivet</option>
+                        </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label " for="md-r">Mode de remboursement:</label>
-                        <select class="form-select" id="md-r"required>
+                    <label class="form-label " for="date_du_prêt">Date du prêt</label>
+                    <input type="date" class="form-control " id="date_du_prêt" name="date_du_pret" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label " for="mode_de_remboursement">Mode de remboursement:</label>
+                        <select class="form-select" id="mode_de_remboursement" name="mode_de_remboursement" required>
                             <option>Mensuel</option>
                             <option>Bimestriel</option>
                             <option>trimestriel</option>
                         </select>
                 </div>
                 <div class="form-group container_com">
-                    <label class="form-label " for="com">Commentaire</label>
-                    <textarea type="text" class="form-control" id="com"></textarea>
-                    <label class="form-label" for="com">Ajouter votre note ici</label>
+                    <label class="form-label " for="commentaire">Commentaire</label>
+                    <textarea type="text" class="form-control" id="commentaire"></textarea>
+                    <label class="form-label" for="com" name="commentaire">Ajouter votre note ici</label>
                 </div> 
             </div>
             <div class="col-lg-7">
@@ -39,28 +47,36 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="montant" >Ar</span>
                             </div>
-                            <input type="number" name="montant"  class="form-control" id="montant" min="0" step="500"placeholder="Montant prêt" required>
+                            <input type="number" name="montant"  class="form-control" id="montant" min="0" step="500" placeholder="Montant prêt" required>
                         </div>
                    </div>
                    <div class="col-md-5 form-group">
-                   <label class="form-label  " for="Pourcentage">Pourcentage</label>
+                   <label class="form-label  " for="pourcentage">Pourcentage</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="montant">%</span>
                             </div>
-                            <input type="number" class="form-control" id="Pourcentage" placeholder="0%" max="100" min="1" required> 
+                            <input type="number" class="form-control" id="pourcentage" placeholder="0%" max="100" min="1" required> 
                         </div> 
                    </div>
                </div>
                <div class="form-group  ">
-                    <label class="form-label" for="dt-remb">Date de remboursement</label>
-                    <input type="date" class="form-control" id="dt-remb" required>  
+                    <label class="form-label" for="date_de_remboursement">Date de remboursement</label>
+                    <input type="date" class="form-control" id="date_de_remboursement" name="date_de_remboursement" required>  
                </div>
                <div class="form-group">
-                    <label class="form-label " for="md-p">Mode de paiement</label>
-                    <select class="form-select" id="md-p" required>
+                    <label class="form-label " for="mode_de_paiment_interet">Mode de paiement des intérêt</label>
+                    <select class="form-select" id="mode_de_paiment_interet" name="mode_de_paiment_interet" required>
                         <option>Mvola</option>
                         <option>Banque</option>
+                        <option>OrangeMoney</option>
+                        <option>AirtelMoney</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label " for="mode_de_paiment_capital">Mode de paiement du capital</label>
+                    <select class="form-select" id="mode_de_paiment_capital" name="mode_de_paiment_capital" required>
+                        <option>Mvola</option>
                         <option>OrangeMoney</option>
                         <option>AirtelMoney</option>
                     </select>
