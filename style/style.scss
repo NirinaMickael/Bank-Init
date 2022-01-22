@@ -1,15 +1,16 @@
 *{
     margin: 0;
 }
+/*form*/
 form{
     background-color: white !important;
     .bg-gray{
-            background-color:  rgba(198, 198, 200, 0.825);
+            background-color:  rgba(224, 224, 225, 0.825);
         }
 }
 .container_com{
     :last-child{
-      font-size: 2em;  
+      font-size: .7em;  
     }
 }
 /********LIST********/
