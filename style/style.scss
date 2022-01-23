@@ -9,8 +9,8 @@ form{
         }
 }
 .container_com{
-    :last-child{
-      font-size: .7em;  
+    label:nth-child(2){
+      font-size: .7em ;  
     }
 }
 /********LIST********/

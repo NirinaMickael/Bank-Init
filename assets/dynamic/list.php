@@ -1,5 +1,4 @@
-<?php require_once('assets/dynamic/header.php')?>
-<body>
+<?= header_page('../../style/style.css','../../bootstrap-5.0.2-dist/css/bootstrap.min.css','Liste')?>
 <main class="container-fluid">
     <div class="container-fluid my-3">
         <div class="my-3 float-left">

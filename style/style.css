@@ -11,7 +11,7 @@ form .bg-gray {
   background-color: rgba(224, 224, 225, 0.825);
 }
 
-.container_com :last-child {
+.container_com label:nth-child(2) {
   font-size: .7em;
 }
 
