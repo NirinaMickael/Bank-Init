@@ -44,4 +44,29 @@ HTML;
         $query = $DATA_BASE->prepare($sql);
         $query->execute([...$champ]);
     }
+    //pour obtenir la dernier id table $table_name;
+    function get_last_id($DATA_BASE,$TABLE_NAME){
+        $data = requete_select($DATA_BASE,$TABLE_NAME);
+        if(count($data)){
+            $last_id = $data[count($data)-1]['id'];
+            return $last_id;
+        }else{
+            return 0;
+        }
+    }
+    //pour tester si l'utilisateur envoye des champs  vide
+    function test_user_input($champ){
+        $test = false;
+        foreach($champ as $key => $val){
+            if(empty($val) == true && isset($val)==false){
+                 $test = false;
+                 break;
+            }else{
+              // strip_tags : va enelever les balises html lorsque l'utilisateur les tape   
+                 $val = strip_tags($val);
+                $test = true;
+            }
+        }
+        return $test;
+    }
 ?>

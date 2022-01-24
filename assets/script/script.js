@@ -1,5 +1,6 @@
 /*changer l'icon*/
 /* recuperer l'elemnent tbody de la page table.php*/
+
 let tbody=document.querySelector('tbody');
 class TableList{
     constructor(data,tbody){
