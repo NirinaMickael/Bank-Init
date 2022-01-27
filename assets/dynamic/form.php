@@ -1,11 +1,4 @@
-<?php
-    $DB_HOST = explode(':',$_SERVER['HTTP_HOST'])[0]; 
-    $DB_NAME = 'Bankint';
-    $DB_USER='root';
-    $DB_PASS='';   
-    $data_base = connect_database($DB_HOST,$DB_NAME,$DB_USER,$DB_PASS);
-
-?>
+<?php  require('assets/database/db.php')?>
 <main class="container-fluid m-auto mt-3 container_form">       
         <form class="needs-validation border row" method="POST" action="assets/controller/Loan.php">
             <div class="row m-0 mb-2  bg-gray">
@@ -13,50 +6,51 @@
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
-                    <label class="form-label " for="Responsible ">Responsable</label>
-                        <select class="form-select form-check"  id="responsable" name="Responsible" required>
-                        <?php $responsable = requete_select($data_base,'Responsible'); ?>
+                    <label class="form-label " for="responsable ">Responsable</label>
+                        <select class="form-select form-check"  id="responsible" name="responsible" required>
+                        <?php $responsable = requete_select($data_base,'responsible'); ?>
                         <?php  foreach($responsable as $res):?>
-                            <option value=<?= $res['id']?>><?= $res['Last_name']?></option>
+                            <option value=<?= $res['responsible_id']?>><?= $res['last_name']?></option>
                         <?php endforeach; ?>
                         </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label " for="Client">Client</label>
-                        <select class="form-select form-check"  id="Client" name="Client" required>
-                        <?php $client = requete_select($data_base,'Client'); ?>
+                        <select class="form-select form-check"  id="Client" name="client" required>
+                        <?php $client = requete_select($data_base,'client'); ?>
                         <?php  foreach($client as $res):?>
-                            <option value=<?= $res['id']?>><?= $res['Company_name']?></option>
+                            <option value=<?= $res['client_id']?>><?= $res['company_name']?></option>
                         <?php endforeach; ?>
                         </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label " for="Loan_date ">Date du prêt</label>
-                    <input type="date" class="form-control " id="Loan_date" name="Loan_date" required>
+                    <label class="form-label " for="loan_date ">Date du prêt</label>
+                    <input type="date" class="form-control " id="loan_date" name="loan_date" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label " for="Repayment_frequency">Mode de remboursement:</label>
-                        <select class="form-select" id="Repayment_frequency" name="Repayment_frequency"  required>
-                            <option value="1">Mensuel</option>
-                            <option value="2">Bimestriel</option>
-                            <option value="3">Trimestriel</option>
+                        <select class="form-select" id="Repayment_frequency" name="repayment_frequency"  required>
+                        <?php $Repayment_frequency = requete_select($data_base,'repayment_frequency'); ?>
+                        <?php  foreach($Repayment_frequency as $res):?>
+                            <option value=<?= $res['repayment_frequency_id']?>><?= $res['wording']?></option>
+                        <?php endforeach; ?>>
                         </select>
                 </div>
                 <div class="form-group container_com">
-                    <label class="form-label " for="Remark">Commentaire</label>
-                    <textarea type="text" class="form-control" id="Remark" name="Remark" ></textarea>
-                    <label class="form-label" for="Remark"  >Ajouter votre note ici</label>
+                    <label class="form-label " for="remark">Commentaire</label>
+                    <textarea type="text" class="form-control" id="remark" name="remark" ></textarea>
+                    <label class="form-label" for="remark"  >Ajouter votre note ici</label>
                 </div> 
             </div>
             <div class="col-lg-7">
                <div class="row">
                    <div class="col-md-7">
-                        <label class="form-label " for="Amount">Montant prêt</label>
+                        <label class="form-label " for="amount">Montant prêt</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="Amount" >Ar</span>
+                                <span class="input-group-text" id="amount" >Ar</span>
                             </div>
-                            <input type="number" name="Amount"  class="form-control" id="Amount" min="0" step="500" placeholder="Montant prêt" required>
+                            <input type="number" name="amount"  class="form-control" id="amount" min="0" step="500" placeholder="Montant prêt" required>
                         </div>
                    </div>
                    <div class="col-md-5 form-group">
@@ -71,22 +65,22 @@
                </div>
                <div class="form-group  ">
                     <label class="form-label" for="Repayment_end_date">Date de remboursement</label>
-                    <input type="date" class="form-control" id="Repayment_end_date " name="Repayment_end_date" required>  
+                    <input type="date" class="form-control" id="Repayment_end_date " name="repayment_end_date" required>  
                </div>
                <div class="form-group">
-                    <label class="form-label " for="Benefit_payment_method">Mode de paiement des intérêt</label>
-                    <select class="form-select" id="Benefit_payment_method" name="Benefit_payment_method" required>
-                    <?php $p_method = requete_select($data_base,'Payment_method') ?>
+                    <label class="form-label " for="benefit_payment_method">Mode de paiement des intérêt</label>
+                    <select class="form-select" id="benefit_payment_method" name="benefit_payment_method" required>
+                    <?php $p_method = requete_select($data_base,'payment_method') ?>
                     <?php  foreach($p_method as $res):?>
-                            <option value=<?= $res['id']?>><?= $res['Label']?></option>
+                            <option value=<?= $res['payment_method_id']?>><?= $res['label']?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label " for="Capital_payment_method">Mode de paiement du capital</label>
-                    <select class="form-select" id="Capital_payment_method" name="Capital_payment_method" required>
+                    <label class="form-label " for="capital_payment_method">Mode de paiement du capital</label>
+                    <select class="form-select" id="capital_payment_method" name="capital_payment_method" required>
                     <?php  foreach($p_method as $res):?>
-                            <option value=<?= $res['id']?>><?= $res['Label']?></option>
+                            <option value=<?= $res['capital_payment_method_id']?>><?= $res['label']?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
