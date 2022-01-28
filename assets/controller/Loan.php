@@ -9,7 +9,7 @@
     }else{
         $id=1;
     }
-    $sql = "INSERT INTO `Loan` (`id`,`responsible`,`client`,`amount`,`loan_date`,`benefit_payment_method`,`capital_payment_method`,`remark`) VALUES ($id,?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO `Loan` (`loan_id`,`responsible`,`client`,`amount`,`loan_date`,`benefit_payment_method`,`capital_payment_method`,`remark`) VALUES ($id,?,?,?,?,?,?,?);";
     //tester si l'utilisateur envoye des valeurs vide;
       $test = false;
         $champ =[$_POST['responsible'],$_POST['client'],$_POST['amount'],$_POST['loan_date'],$_POST['benefit_payment_method'],$_POST['capital_payment_method'],$_POST['remark']];

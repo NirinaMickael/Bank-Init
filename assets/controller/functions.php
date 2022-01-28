@@ -47,7 +47,10 @@ HTML;
     //pour obtenir la dernier id table $table_name;
     function get_last_id($DATA_BASE,$TABLE_NAME){
         $data = requete_select($DATA_BASE,$TABLE_NAME);
-        $id=$TABLE_NAME+'_id';
+        //met le nom du table et "_id" dans un array
+        $id = [$TABLE_NAME,"_id"];
+        //puis convertir cette tableau en chaine de caractere
+        $id = implode('',$id);
         if(count($data)){
             $last_id = $data[count($data)-1][$id];
             return $last_id;
